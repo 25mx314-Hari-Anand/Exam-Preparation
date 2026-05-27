@@ -1,3 +1,52 @@
+# CO - 1 Trees
+## 1. AVL Tree
+## 2. B Tree
+## 3. B+ Tree
+## 4. Trie
+---
+# CO - 2 Divide & Conquer
+## 1. Binary Search
+
+## 2. Maximum and Minimum
+- Node Representation
+
+| Start | End | Max | Min |
+|-------|-----|-----|-----|
+
+## 3. Merge Sort
+
+## 4. Quick Sort
+
+## 5. Knapsack Problem
+1. Greedy About Profit (Select Max Profit)
+2. Greedy about Weight (Select Min Weight)
+3. Greedy about Object (Select 1/2 + 1/3 .. + 1/n)
+4. Greedy about both Profit and Weight - Max(P/W)
+
+## 6. Minimum Cost Spanning Tree
+
+## 7. Prim's
+
+## 8. Single Source Shortest Path
+- Tabulation
+
+| Select Vertex | 1 | 2 | 3 | 4 | 5 |
+|---------------|---|---|---|---|---|
+|      1        | 0 | @ | @ | @ | @ |
+
+## 9. Optimal Storage Tapes
+
+- Rules
+  - Sort the values and place all the values in the vertical order
+  - **Eg:** 1 2 3 = 1 + (1+2) + (1+2+3) = Total Retrival Time / N = MRT
+
+## 10. Optimal Merge Pattern: Huffman Coding
+- Left branch should be smaller and right should be greater
+- **Left** - 0 **Right** - 1
+
+
+---
+
 # CO - 3 Dynamic Programming
 ## Principle of Optimality
 
@@ -56,6 +105,7 @@
 
 ## 8. Longest Subsequence
 
+---
 
 # CO - 4 Backtracking
 ## 1. N-Queens Problem
