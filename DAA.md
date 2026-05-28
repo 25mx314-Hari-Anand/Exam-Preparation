@@ -42,12 +42,23 @@ Trie is a tree-based data structure used to store and retrieve a dynamic set of 
 | ------------------ | ------------------- | --------------- |
 | Binary Search      | (T(n)=T(n/2)+c)     | (O(\log n))     |
 
+Recursive Method
+
+<img width="979" height="736" alt="image" src="https://github.com/user-attachments/assets/f7706743-bc39-43c3-9d1b-7b0504ca786d" />
+
+Iterative Method
+
+<img width="1071" height="639" alt="image" src="https://github.com/user-attachments/assets/cda199f1-5ce0-4123-9e7b-069482075c01" />
+
 
 ## 2. Maximum and Minimum
 - Node Representation
 
 | Start | End | Max | Min |
 |-------|-----|-----|-----|
+
+<img width="1026" height="1097" alt="image" src="https://github.com/user-attachments/assets/3bbdc141-6380-446b-9a59-fdda63aa8fad" />
+
 
 ## 3. Merge Sort
 
@@ -63,12 +74,28 @@ Tabulation (Merge):
 | ------------------ | ------------------- | --------------- |
 | Merge Sort         | (T(n)=2T(n/2)+cn)   | (O(n\log n))    |
 
+Merge Sort:
+
+<img width="1073" height="635" alt="image" src="https://github.com/user-attachments/assets/0daf8f4d-f819-441b-8200-2e61e2e10304" />
+
+Merge:
+
+<img width="1106" height="1163" alt="image" src="https://github.com/user-attachments/assets/f6b8f187-257a-4653-bf17-bcef911087af" />
+
+
 ## 4. Quick Sort
 
 | Algorithm          | Recurrence Relation | Time Complexity |
 | ------------------ | ------------------- | --------------- |
 | Quick Sort (Best)  | (T(n)=2T(n/2)+cn)   | (O(n\log n))    |
 | Quick Sort (Worst) | (T(n)=T(n-1)+cn)    | (O(n^2))        |
+
+- Partition
+<img width="954" height="1141" alt="image" src="https://github.com/user-attachments/assets/c6c3fcd0-5151-4751-9ce5-a74a1218915b" />
+
+- Sort
+<img width="1054" height="615" alt="image" src="https://github.com/user-attachments/assets/bbcb8ce8-98bc-4feb-931e-8eea00978946" />
+
 
 ## 5. Knapsack Problem
 1. Greedy About Profit (Select Max Profit)
@@ -79,6 +106,7 @@ Tabulation (Merge):
 ## 6. Minimum Cost Spanning Tree
 
 ## 7. Prim's
+<img width="1142" height="1044" alt="image" src="https://github.com/user-attachments/assets/4b6757c4-48e4-43b1-a0eb-83627c725027" />
 
 
 ## 8. Single Source Shortest Path
@@ -88,11 +116,17 @@ Tabulation (Merge):
 |---------------|---|---|---|---|---|
 |      1        | 0 | @ | @ | @ | @ |
 
+<img width="1014" height="859" alt="image" src="https://github.com/user-attachments/assets/f8cf8c54-8127-46e9-9e8c-3a3f7f5c535a" />
+
+
 ## 9. Optimal Storage Tapes
 
 - Rules
   - Sort the values and place all the values in the vertical order
   - **Eg:** 1 2 3 = 1 + (1+2) + (1+2+3) = Total Retrival Time / N = MRT
+ 
+<img width="1099" height="441" alt="image" src="https://github.com/user-attachments/assets/1292c315-38b4-4019-ac92-2e351b3a4683" />
+
 
 ## 10. Optimal Merge Pattern: Huffman Coding
 - Left branch should be smaller and right should be greater
@@ -113,6 +147,7 @@ An optimal solution to a problem contains optimal solutions to its subproblems
 <img width="572" height="288" alt="image" src="https://github.com/user-attachments/assets/35abca75-afae-490f-bc1a-519d301b84da" />
 
 ## 2. 0/1 Knapsack
+<img width="1128" height="643" alt="image" src="https://github.com/user-attachments/assets/8331da97-5d00-4515-a1b9-76f8c6068d94" />
 
 ## 3. Travelling Salesmsn
 - To Find
@@ -153,11 +188,28 @@ An optimal solution to a problem contains optimal solutions to its subproblems
 <img width="522" height="291" alt="image" src="https://github.com/user-attachments/assets/b3d30378-7193-4a25-b6e8-058a6154c73e" />
 
 ## 6. String Editing
+- Not Match
+  - Minimum of UP + 1, LEFT + 1, DIAGANOL + 2
+
+| D | UP |
+|---|----|
+| L |    |
+
+- Match
+  - Diaganol 
 
 ## 7. Flow Shop Scheduling
 
 ## 8. Longest Subsequence
+- Not Match
+  - Max of UP, LEFT
 
+|   | UP |
+|---|----|
+| L |    |
+
+- Match
+  - Diaganol + 1
 ---
 
 # CO - 4 Backtracking
@@ -180,6 +232,11 @@ An optimal solution to a problem contains optimal solutions to its subproblems
 |    |    |    | Q3 |
 |    | Q4 |    |    |
 
+<img width="1111" height="543" alt="image" src="https://github.com/user-attachments/assets/0c3e92e3-0af0-4d59-a8ec-3d79d550a602" />
+
+<img width="951" height="576" alt="image" src="https://github.com/user-attachments/assets/bd7dd570-c685-44ca-95ee-0303b848bb6d" />
+
+
 ## 2. Least Cost Branch and Bound
 - Rules:
   - If C is greater than Upper means Kill the Node
@@ -194,3 +251,347 @@ An optimal solution to a problem contains optimal solutions to its subproblems
 - **Left:** S + W[K] == M -> Solution
 - **Left:** S + W[K] + W[K + 1] <= M -> Increase Left Else Kill
 - **Right:** S + W[K+1] <= M -> Increase Right Else Kill
+
+<img width="1162" height="748" alt="image" src="https://github.com/user-attachments/assets/f9e0a254-92fb-4e74-98e3-e7325223e325" />
+
+
+
+---
+
+# E-Node, Live Node, Dead Node
+
+These terms are commonly used in Branch and Bound and State Space Tree searching.
+
+---
+
+# 1. E-Node (Expansion Node)
+
+An **E-node** (Expansion Node) is the node currently being expanded in the state-space tree.
+
+- Its children are generated.
+- The algorithm explores possible solutions from this node.
+
+## Definition
+
+An E-node is the live node selected for expansion.
+
+---
+
+## Example
+
+If a node represents a partial solution and we generate all next possible choices from it, that node becomes the E-node.
+
+---
+
+# 2. Live Node
+
+A **Live Node** is a generated node that has not yet been expanded.
+
+- It is still eligible for exploration.
+- It may lead to the final solution.
+
+## Definition
+
+A live node is a generated node whose children have not yet been created.
+
+---
+
+## Characteristics
+
+- Waiting for expansion
+- Stored in queue/stack/priority queue
+- Promising node
+
+---
+
+# 3. Dead Node
+
+A **Dead Node** is a node that will not be expanded further.
+
+This happens when:
+
+- It cannot produce a better solution
+- It violates constraints
+- It has already been explored
+
+## Definition
+
+A dead node is a node that is discarded and not considered for further expansion.
+
+---
+
+## Characteristics
+
+- Non-promising
+- Pruned from search space
+- No children generated
+
+---
+
+# Simple State Flow
+
+Live Node → E-Node → Dead Node
+
+### Explanation
+
+1. Node is first generated → Live Node
+2. Selected for expansion → E-node
+3. Fully explored/discarded → Dead Node
+
+---
+
+# Example in Branch and Bound
+
+Consider solving a knapsack problem:
+
+- Generated states → Live nodes
+- Current node being processed → E-node
+- Nodes exceeding weight limit → Dead nodes
+
+---
+
+# Comparison Table
+
+| Term | Meaning |
+|---|---|
+| E-node | Node currently expanded |
+| Live Node | Generated but not expanded |
+| Dead Node | Discarded node not expanded further |
+
+
+# Subset Paradigm and Ordered Paradigm in Greedy Method
+
+In Greedy Algorithms, problems are solved using different strategies called paradigms.
+
+Two important paradigms are:
+
+1. Subset Paradigm
+2. Ordered Paradigm
+
+---
+
+# 1. Subset Paradigm
+
+The **Subset Paradigm** constructs a solution by selecting a subset of items from a given set.
+
+At each step:
+
+- Choose the best available item using a greedy choice.
+- Add it to the solution if it satisfies the constraints.
+
+The final solution is a subset of all available elements.
+
+---
+
+## Working
+
+Given a set:
+
+S = {x1, x2, x3, ..., xn}
+
+The algorithm repeatedly:
+
+1. Selects the best candidate.
+2. Checks feasibility.
+3. Adds it to the solution subset.
+
+---
+
+## Examples
+
+- Minimum Spanning Tree
+- Knapsack Problem
+- Job Sequencing Problem
+
+---
+
+## Example (Knapsack Problem)
+
+Items are selected based on maximum profit/weight ratio.
+
+Selected items form a subset of all items.
+
+---
+
+# 2. Ordered Paradigm
+
+The **Ordered Paradigm** constructs the solution step-by-step in a specific order.
+
+Instead of selecting arbitrary subsets:
+
+- Elements are processed in sorted or sequential order.
+- Decisions depend on the order.
+
+---
+
+## Working
+
+1. Arrange elements according to some criterion:
+   - Smallest first
+   - Largest first
+   - Earliest deadline
+   - Shortest duration
+
+2. Process them one by one greedily.
+
+---
+
+## Examples
+
+- Huffman Coding
+- Activity Selection Problem
+- Dijkstra’s Algorithm
+
+---
+
+## Example (Activity Selection Problem)
+
+Activities are sorted by finishing time.
+
+Then activities are selected in that order.
+
+---
+
+# Difference Between Subset and Ordered Paradigm
+
+| Feature | Subset Paradigm | Ordered Paradigm |
+|---|---|---|
+| Main Idea | Select best subset | Process elements in order |
+| Selection | Based on feasibility | Based on arranged order |
+| Output | Subset of elements | Ordered sequence |
+| Examples | Knapsack, MST | Activity Selection, Huffman |
+
+---
+
+# Short Definitions
+
+## Subset Paradigm
+
+Constructs the solution by selecting a feasible subset of elements using greedy choices.
+
+## Ordered Paradigm
+
+Constructs the solution by processing elements in a specific greedy order.
+
+
+# Implicit Constraint and Explicit Constraint
+
+These terms are commonly used in Backtracking, Branch and Bound, and Constraint Satisfaction Problems.
+
+---
+
+# 1. Explicit Constraint
+
+An **Explicit Constraint** directly defines all possible values that a solution component can take.
+
+It specifies the allowable set of values for variables.
+
+---
+
+## Definition
+
+An explicit constraint restricts each variable to take values from a predefined set or domain.
+
+---
+
+## Example
+
+If a variable x can take values only from:
+
+x ∈ {1, 2, 3, 4}
+
+then this is an explicit constraint.
+
+---
+
+## Characteristics
+
+- Directly stated
+- Defines the solution space
+- Easy to check
+
+---
+
+## Example Problems
+
+- N-Queens
+- Graph Coloring
+- Sudoku
+
+---
+
+# 2. Implicit Constraint
+
+An **Implicit Constraint** restricts which combinations of values are allowed.
+
+It defines relationships between variables.
+
+---
+
+## Definition
+
+An implicit constraint limits feasible solutions by specifying conditions among variables.
+
+---
+
+## Example
+
+In the 4-Queens problem:
+
+No two queens can attack each other.
+
+This is an implicit constraint because it restricts combinations of queen positions.
+
+---
+
+## Characteristics
+
+- Not directly listed
+- Applied during solution construction
+- Removes invalid solutions
+
+---
+
+# Example in N-Queens Problem
+
+## Explicit Constraints
+
+Each queen must be placed:
+
+- In a valid row
+- In a valid column
+
+Example:
+
+Qi ∈ {1,2,3,4}
+
+---
+
+## Implicit Constraints
+
+- No two queens in same row
+- No two queens in same column
+- No two queens on same diagonal
+
+---
+
+# Difference Between Explicit and Implicit Constraints
+
+| Feature | Explicit Constraint | Implicit Constraint |
+|---|---|---|
+| Meaning | Defines possible values | Defines relationships between values |
+| Purpose | Limits domain | Limits valid combinations |
+| Applied On | Individual variables | Combination of variables |
+| Example | x ∈ {1,2,3} | x ≠ y |
+
+---
+
+# Short Definitions
+
+## Explicit Constraint
+
+A constraint that directly specifies the possible values of variables.
+
+## Implicit Constraint
+
+A constraint that restricts valid combinations of variable assignments.
