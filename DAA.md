@@ -1,11 +1,47 @@
 # CO - 1 Trees
 ## 1. AVL Tree
+An AVL tree is a self-balancing binary search tree where the height difference (balance factor) between the left and right subtrees of any node is at most 1
+- Types of Rotation
+  - LL Rotation
+  - RR Rotation
+  - LR Rotation
+  - RL Rotation
+- **Height:** log N
+
+**Special Case: If Right <=0 LL Rotation else RL Rotation**
+
 ## 2. B Tree
+A B-tree is a self-balancing tree data structure that allows for sorted data and efficient searching, insertion, and deletion operations
+- Leaf Node:
+  1. Borrow from Left Sibiling
+  2. Borrow from Right Sibiling
+  3. Merge with Head Node
+- Internal Node
+  1. Largest Element in Left
+  2. Smallest Element in Right
+  3. Merge
+- Max Children : M
+- Min Children : ⌈M/2⌉
+- Height: h=O(log<sub>m​</sub>n)
+### Special Case in B tree
+
+<img width="1089" height="450" alt="image" src="https://github.com/user-attachments/assets/2de6ac57-71c9-44ac-8184-20d6af90ab07" />
+
 ## 3. B+ Tree
+A B+ tree is an advanced, self-balancing search tree data structure primarily used in database systems (like MySQL) and file systems
+- Same rules as B Tree but delete the element in the leap first
 ## 4. Trie
+Trie is a tree-based data structure used to store and retrieve a dynamic set of strings
+
+## 5. Algorithmic Complexity and Asymptotic Notation
+
 ---
 # CO - 2 Divide & Conquer
 ## 1. Binary Search
+| Algorithm          | Recurrence Relation | Time Complexity |
+| ------------------ | ------------------- | --------------- |
+| Binary Search      | (T(n)=T(n/2)+c)     | (O(\log n))     |
+
 
 ## 2. Maximum and Minimum
 - Node Representation
@@ -15,7 +51,24 @@
 
 ## 3. Merge Sort
 
+Tabulation (Partition):
+| Start | End |
+|-------|-----|
+
+Tabulation (Merge):
+| Start | Mid | End |
+|-------|-----|-----|
+
+| Algorithm          | Recurrence Relation | Time Complexity |
+| ------------------ | ------------------- | --------------- |
+| Merge Sort         | (T(n)=2T(n/2)+cn)   | (O(n\log n))    |
+
 ## 4. Quick Sort
+
+| Algorithm          | Recurrence Relation | Time Complexity |
+| ------------------ | ------------------- | --------------- |
+| Quick Sort (Best)  | (T(n)=2T(n/2)+cn)   | (O(n\log n))    |
+| Quick Sort (Worst) | (T(n)=T(n-1)+cn)    | (O(n^2))        |
 
 ## 5. Knapsack Problem
 1. Greedy About Profit (Select Max Profit)
@@ -26,6 +79,7 @@
 ## 6. Minimum Cost Spanning Tree
 
 ## 7. Prim's
+
 
 ## 8. Single Source Shortest Path
 - Tabulation
@@ -44,12 +98,11 @@
 - Left branch should be smaller and right should be greater
 - **Left** - 0 **Right** - 1
 
-
 ---
 
 # CO - 3 Dynamic Programming
 ## Principle of Optimality
-
+An optimal solution to a problem contains optimal solutions to its subproblems
 
 ## 1. All Pairs shortest path
 - If there is 4 Nodes find A1, A2, A3 and A4
