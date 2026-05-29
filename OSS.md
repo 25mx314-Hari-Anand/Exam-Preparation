@@ -316,7 +316,1158 @@ Possible alternative states:
 * Increases software reliability and user satisfaction
 
 ---
+# Unit - 2
+# Client Side vs Server Side
 
+## Introduction
+
+In web applications, processing can occur either on the **client side** or the **server side**. The client side refers to operations performed on the user's device, while the server side refers to operations performed on a remote server.
+
+---
+
+# Client Side
+
+The **client side** is the part of an application that runs on the user's device (browser or mobile application). It is responsible for displaying content and handling user interactions.
+
+## Characteristics
+
+* Executes on the user's device.
+* Provides the user interface (UI).
+* Handles user interactions such as clicks and form validation.
+* Reduces the load on the server.
+* Depends on the user's browser capabilities.
+
+## Technologies Used
+
+* HTML
+* CSS
+* JavaScript
+* Angular
+* React
+* Vue.js
+
+## Examples
+
+* Form validation before submission.
+* Image sliders and animations.
+* Dynamic page updates without reloading.
+* User interface rendering.
+
+---
+
+# Server Side
+
+The **server side** is the part of an application that runs on a web server. It processes requests, performs business logic, interacts with databases, and sends responses back to the client.
+
+## Characteristics
+
+* Executes on a remote server.
+* Handles business logic and data processing.
+* Communicates with databases.
+* Provides security and authentication.
+* Generates responses for clients.
+
+## Technologies Used
+
+* Python (Flask, Django)
+* Java (Spring Boot)
+* JavaScript (Node.js, NestJS)
+* PHP
+* ASP.NET
+
+## Examples
+
+* User authentication and authorization.
+* Database operations (Create, Read, Update, Delete).
+* Payment processing.
+* Generating reports and APIs.
+
+---
+
+# Difference Between Client Side and Server Side
+
+| Feature             | Client Side                           | Server Side                             |
+| ------------------- | ------------------------------------- | --------------------------------------- |
+| Execution Location  | User's device/browser                 | Web server                              |
+| Main Purpose        | User interface and interaction        | Business logic and data processing      |
+| Technologies        | HTML, CSS, JavaScript, Angular, React | Flask, Django, Spring Boot, NestJS, PHP |
+| Access to Database  | No direct access                      | Direct access                           |
+| Security            | Less secure                           | More secure                             |
+| Performance         | Faster for UI operations              | Depends on server resources             |
+| Internet Dependency | Some functions may work offline       | Requires communication with server      |
+| Examples            | Form validation, animations           | Authentication, database queries        |
+
+---
+
+# Working Example
+
+### Client Side
+
+```javascript
+if (password.length < 8) {
+    alert("Password must contain at least 8 characters");
+}
+```
+
+This validation happens in the browser before sending data to the server.
+
+### Server Side
+
+```python
+@app.route('/login', methods=['POST'])
+def login():
+    username = request.form['username']
+    password = request.form['password']
+    
+    # Verify credentials from database
+    return "Login Successful"
+```
+
+This verification occurs on the server after receiving the request.
+
+
+## R Programming
+
+# 1. Introduction to R
+
+## What is R?
+
+R is an open-source programming language and software environment used for:
+
+* Statistical Computing
+* Data Analysis
+* Data Visualization
+* Machine Learning
+* Scientific Research
+
+### Features of R
+
+* Free and Open Source
+* Cross Platform
+* Large Package Ecosystem
+* Excellent Visualization Capabilities
+* Supports Statistical Analysis
+
+### Applications
+
+* Data Science
+* Business Analytics
+* Bioinformatics
+* Artificial Intelligence
+* Financial Analysis
+
+---
+
+# 2. R Programming Environment
+
+## Components
+
+### R Console
+
+Interactive environment where commands are executed.
+
+```r
+print("Hello World")
+```
+
+### R Script
+
+Files with `.R` extension.
+
+```r
+x <- 10
+y <- 20
+print(x+y)
+```
+
+### RStudio
+
+Popular IDE for R Programming.
+
+Features:
+
+* Script Editor
+* Console
+* Environment Window
+* Plot Window
+* Package Manager
+
+---
+
+# 3. Basic Language Elements
+
+## Variables
+
+```r
+name <- "Lalit"
+age <- 22
+```
+
+## Data Types
+
+```r
+num <- 10
+dec <- 12.5
+txt <- "Hello"
+flag <- TRUE
+```
+
+| Type      | Example |
+| --------- | ------- |
+| Numeric   | 10      |
+| Integer   | 10L     |
+| Character | "Hello" |
+| Logical   | TRUE    |
+| Complex   | 2+3i    |
+
+## Operators
+
+### Arithmetic
+
+```r
+10+5
+10-5
+10*5
+10/5
+10^2
+```
+
+### Relational
+
+```r
+10 > 5
+10 == 5
+10 != 5
+```
+
+### Logical
+
+```r
+TRUE & FALSE
+TRUE | FALSE
+!TRUE
+```
+
+---
+
+# 4. Data Structures
+
+## Vector
+
+Stores same datatype elements.
+
+```r
+marks <- c(80,90,95,100)
+print(marks)
+```
+
+## Matrix
+
+```r
+m <- matrix(c(1,2,3,4), nrow=2)
+print(m)
+```
+
+## Array
+
+```r
+arr <- array(1:12, dim=c(2,3,2))
+```
+
+## List
+
+```r
+student <- list(
+  name="Lalit",
+  age=22,
+  marks=95
+)
+```
+
+## Data Frame
+
+```r
+df <- data.frame(
+  Name=c("A","B"),
+  Marks=c(90,95)
+)
+```
+
+---
+
+# 5. Data Input and Output
+
+## Reading CSV
+
+```r
+data <- read.csv("student.csv")
+```
+
+## Writing CSV
+
+```r
+write.csv(data,"output.csv")
+```
+
+## Reading Text File
+
+```r
+readLines("sample.txt")
+```
+
+## Writing Text File
+
+```r
+writeLines("Hello R","sample.txt")
+```
+
+---
+
+# 6. Data Storage Formats
+
+## CSV
+
+```r
+read.csv("file.csv")
+```
+
+## TXT
+
+```r
+read.table("file.txt")
+```
+
+## RData
+
+```r
+save(x,file="data.RData")
+load("data.RData")
+```
+
+## RDS
+
+```r
+saveRDS(x,"data.rds")
+readRDS("data.rds")
+```
+
+---
+
+# 7. Subsetting Objects
+
+## Vector Subsetting
+
+```r
+x <- c(10,20,30,40)
+
+x[1]
+x[2:3]
+```
+
+## Matrix Subsetting
+
+```r
+m[1,2]
+```
+
+## Data Frame Subsetting
+
+```r
+df[1,]
+df[,2]
+```
+
+## Logical Subsetting
+
+```r
+x[x > 20]
+```
+
+Output
+
+```r
+30 40
+```
+
+---
+
+# 8. Vectorization
+
+Vectorization performs operations on entire vectors.
+
+## Without Vectorization
+
+```r
+x <- c(1,2,3)
+
+for(i in 1:3){
+ print(x[i]*2)
+}
+```
+
+## With Vectorization
+
+```r
+x*2
+```
+
+Output
+
+```r
+2 4 6
+```
+
+Advantages:
+
+* Faster
+* Cleaner Code
+* Less Memory Usage
+
+---
+
+# 9. Control Structures
+
+## If Statement
+
+```r
+x <- 10
+
+if(x > 5){
+ print("Greater")
+}
+```
+
+## If Else
+
+```r
+if(x > 5){
+ print("Greater")
+}else{
+ print("Smaller")
+}
+```
+
+## Nested If
+
+```r
+if(x > 0){
+ if(x > 10){
+   print("Large")
+ }
+}
+```
+
+## Switch
+
+```r
+switch(
+ "a",
+ a="Apple",
+ b="Ball"
+)
+```
+
+---
+
+# 10. Loops
+
+## For Loop
+
+```r
+for(i in 1:5){
+ print(i)
+}
+```
+
+## While Loop
+
+```r
+i <- 1
+
+while(i <= 5){
+ print(i)
+ i <- i+1
+}
+```
+
+## Repeat Loop
+
+```r
+i <- 1
+
+repeat{
+ print(i)
+ i <- i+1
+
+ if(i > 5)
+  break
+}
+```
+
+---
+
+# 11. Functions
+
+## Creating Function
+
+```r
+add <- function(a,b){
+ return(a+b)
+}
+```
+
+## Calling Function
+
+```r
+add(10,20)
+```
+
+Output
+
+```r
+30
+```
+
+## Default Arguments
+
+```r
+square <- function(x=2){
+ x*x
+}
+```
+
+---
+
+# 12. Scoping Rules
+
+R uses Lexical Scoping.
+
+```r
+x <- 100
+
+f <- function(){
+ print(x)
+}
+
+f()
+```
+
+Output
+
+```r
+100
+```
+
+Example:
+
+```r
+make.power <- function(n){
+
+ function(x){
+   x^n
+ }
+
+}
+
+cube <- make.power(3)
+
+cube(2)
+```
+
+Output
+
+```r
+8
+```
+
+---
+
+# 13. Loop Functions
+
+## apply()
+
+```r
+m <- matrix(1:9,nrow=3)
+
+apply(m,1,sum)
+```
+
+## lapply()
+
+```r
+x <- list(1:5,6:10)
+
+lapply(x,sum)
+```
+
+## sapply()
+
+```r
+sapply(x,sum)
+```
+
+## tapply()
+
+```r
+marks <- c(80,90,70,95)
+
+group <- c("A","A","B","B")
+
+tapply(marks,group,mean)
+```
+
+---
+
+# 14. Graphics and Visualization
+
+## Scatter Plot
+
+```r
+x <- c(1,2,3,4)
+y <- c(10,20,30,40)
+
+plot(x,y)
+```
+
+## Line Chart
+
+```r
+plot(x,y,type="l")
+```
+
+## Bar Chart
+
+```r
+barplot(c(10,20,30))
+```
+
+## Histogram
+
+```r
+hist(rnorm(100))
+```
+
+## Pie Chart
+
+```r
+pie(c(10,20,30))
+```
+
+---
+
+# 15. Grammar of Data Manipulation
+
+Using dplyr package
+
+```r
+library(dplyr)
+```
+
+## select()
+
+```r
+select(df,Name)
+```
+
+## filter()
+
+```r
+filter(df,Marks > 80)
+```
+
+## arrange()
+
+```r
+arrange(df,Marks)
+```
+
+## mutate()
+
+```r
+mutate(df,
+ Total=Marks+10)
+```
+
+## summarize()
+
+```r
+summarize(df,
+ Avg=mean(Marks))
+```
+
+---
+
+# 16. Debugging
+
+## traceback()
+
+```r
+traceback()
+```
+
+## browser()
+
+```r
+browser()
+```
+
+## debug()
+
+```r
+debug(function_name)
+```
+
+## undebug()
+
+```r
+undebug(function_name)
+```
+
+---
+
+# 17. Profiling
+
+Measures performance.
+
+```r
+Rprof("profile.out")
+
+# Code
+
+Rprof(NULL)
+
+summaryRprof("profile.out")
+```
+
+---
+
+# 18. Statistical Simulation
+
+## Random Numbers
+
+```r
+runif(10)
+```
+
+## Normal Distribution
+
+```r
+rnorm(10)
+```
+
+## Binomial Distribution
+
+```r
+rbinom(10,5,0.5)
+```
+
+## Sampling
+
+```r
+sample(1:100,10)
+```
+
+### Monte Carlo Simulation
+
+```r
+n <- 10000
+
+x <- runif(n)
+
+estimate <- mean(x^2)
+
+estimate
+```
+
+---
+
+# 19. Case Study: R as a Scripting Language
+
+R can automate tasks.
+
+## Example: Reading Data and Creating Report
+
+```r
+data <- read.csv("sales.csv")
+
+summary(data)
+
+png("sales_plot.png")
+
+plot(data$Sales)
+
+dev.off()
+```
+
+### Benefits
+
+* Automation
+* Reporting
+* Data Analysis
+* Statistical Modeling
+* Visualization
+
+---
+
+# Important Viva Questions
+
+1. What is R?
+2. Explain vectors and lists.
+3. Difference between matrix and data frame.
+4. What is vectorization?
+5. Explain lexical scoping.
+6. Difference between lapply() and sapply().
+7. What is a data frame?
+8. Explain apply() family functions.
+9. What is profiling?
+10. What is Monte Carlo Simulation?
+
+---
+
+# Frequently Asked University Exam Programs
+
+### Program 1: Factorial
+
+```r
+fact <- function(n){
+
+ if(n==0)
+   return(1)
+
+ return(n*fact(n-1))
+}
+
+fact(5)
+```
+
+### Program 2: Fibonacci
+
+```r
+fib <- function(n){
+
+ if(n<=1)
+   return(n)
+
+ fib(n-1)+fib(n-2)
+}
+
+fib(6)
+```
+
+### Program 3: Mean of Vector
+
+```r
+x <- c(10,20,30,40)
+
+mean(x)
+```
+
+### Program 4: Largest Number
+
+```r
+x <- c(10,50,20,100)
+
+max(x)
+```
+
+### Program 5: Sorting
+
+```r
+sort(c(5,3,8,1))
+```
+
+
+
+
+---
+
+# Unit - 3
+
+## Two-Phase Commit (2PC)
+
+## Introduction
+
+**Two-Phase Commit (2PC)** is a distributed transaction protocol used to ensure that all participating systems in a distributed database either **commit** a transaction successfully or **rollback** the transaction completely. It guarantees **atomicity** in distributed environments.
+
+The protocol involves a **Coordinator** and one or more **Participants (Cohorts)**.
+
+---
+
+# Need for Two-Phase Commit
+
+In distributed systems, a transaction may involve multiple databases or servers. If one server commits the transaction while another fails, the data becomes inconsistent.
+
+The Two-Phase Commit protocol ensures that:
+
+* All participants commit the transaction, or
+* All participants abort (rollback) the transaction.
+
+Thus, consistency is maintained across all systems.
+
+---
+
+# Phases of Two-Phase Commit
+
+## Phase 1: Prepare Phase (Voting Phase)
+
+The coordinator asks all participants whether they are ready to commit the transaction.
+
+### Steps
+
+1. Coordinator sends a **PREPARE** message to all participants.
+2. Each participant performs necessary checks and writes the transaction information to a log.
+3. Participants reply with:
+
+   * **YES (Vote Commit)** if ready to commit.
+   * **NO (Vote Abort)** if unable to commit.
+
+### Outcome
+
+* If all participants vote **YES**, the protocol proceeds to Phase 2.
+* If any participant votes **NO**, the transaction is aborted.
+
+---
+
+## Phase 2: Commit Phase (Decision Phase)
+
+The coordinator makes the final decision based on the votes received.
+
+### Case 1: All Participants Vote YES
+
+1. Coordinator sends a **COMMIT** message.
+2. Participants commit the transaction.
+3. Participants send an acknowledgment (ACK).
+4. Coordinator completes the transaction.
+
+### Case 2: Any Participant Votes NO
+
+1. Coordinator sends an **ABORT/ROLLBACK** message.
+2. Participants rollback their changes.
+3. Participants send an acknowledgment (ACK).
+4. Coordinator terminates the transaction.
+
+---
+
+# Working Diagram
+
+```text
+            Coordinator
+                 |
+      -----------------------
+      |          |          |
+Participant1 Participant2 Participant3
+
+Phase 1 (Prepare)
+Coordinator → PREPARE
+Participants → YES / NO
+
+Phase 2 (Decision)
+If all YES:
+Coordinator → COMMIT
+Participants → ACK
+
+If any NO:
+Coordinator → ABORT
+Participants → ACK
+```
+
+---
+
+# Advantages
+
+* Ensures data consistency across distributed systems.
+* Guarantees atomic transactions.
+* Prevents partial commits.
+* Widely used in distributed databases and transaction processing systems.
+
+---
+
+# Disadvantages
+
+* Can be slow because it requires multiple communication rounds.
+* Coordinator failure may block the transaction.
+* High network overhead in large distributed systems.
+* Participants may remain locked while waiting for the coordinator's decision.
+
+---
+
+# Applications
+
+* Distributed databases
+* Banking systems
+* E-commerce transactions
+* Microservices requiring distributed transactions
+* Enterprise resource planning (ERP) systems
+
+---
+
+## MongoDB
+- No SQL Database (Not Only SQL) because it allows unstructured or semi-structured data to store
+- Relevant Data are Combined
+- Data are stored in `BSON(Binary JSON)` format which very similar to `JSON (JS Object Notation)`
+- BSON stores in binary format so it can be faster
+- Alternatives
+  - Firebase - also No SQL (Backed Google)
+  
+| RDBMS                                       | No SQL                                                 |
+|---------------------------------------------|--------------------------------------------------------|
+| Row(Record of Single User)                  | Document(Record of Single User)                        |
+| Multiple row can combined to create a table | Multiple documents are combined to create a Collection |
+| Database - Collection of Tables             | Database - Collection of Collections                   |
+| Fixed Schema                                | No Fixed Schema (Flexible)                             |
+
+- MongoDB follows the concept called Sharding (Splitting the data into multiple parts to access quickly)
+
+**Note:** We can use MongoDB in two different ways
+- Vertical Scaling
+- Horizontal Scaling
+
+- **Replication:** Creates duplicates for managing the Fault Tolerance
+
+## Setup
+- Install MongoSH (Shell Edition) -> Set Environment Variable (Path)
+- Install MongoDB (Community Edition with Compass)
+
+
+## Commands in Mongo Shell
+
+| Command                                                         | Explanation                                                            |
+|-----------------------------------------------------------------|------------------------------------------------------------------------|
+| *use* db_name                                                   | Used to create database or Used to use the existing database           |
+| *show dbs*                                                      | Used to show all the databases                                         |
+| *db.createCollection("courses")*                                | Used to create the collection                                          |
+| *db.courses.drop()*                                             | Used to drop the collection                                            |
+| *db.dropDatabase()*                                             | Used to drop the database                                              |
+| *db.courses.insertOne({name: "Hari", age:22})*                  | Used to insert the document into collection                            |
+| *db.courses.insertMany([{} , {}])*                              | Used to insert multiple document into the collection                   |
+| *db.courses.find()*                                             | Used to display all the document in the collection                     |
+| *db.courses.find({name:"DSA"})*                                 | Used to display the documents in the collection which has the name DSA |
+| *db.courses.find({age:22} ,{_id:false, name:true, staff:true})* | Used to display only specified data (Like a projection in SQL)         |
+
+### Update Commands Mongo Shell
+
+- **Note:** Courses is name of the collection
+- Syntax: `db.courses.updateOne({For Query}, {$set:{attributeName:"value"}})`
+```
+db.courses.updateOne({name : "Hari}, {$set:{age: 22}})
+```
+- Like this We have one more function called `updateMany()`
+- By using this we can update multiple documents at a time 
+- Like we have `$unset` to delete the field, `$inc` to increment the value.
+- To add element to array we can use `$push` and delete element `$pull` and `$pop` with -1 will delete top and 1 will delete bottom
+```
+db.courses.updateOne({name : "Hari}, {$unset:{age: ""}})
+db.courses.updateMany({$exists :{age : true}}, {$set:{age: 10 }})  // age: 32
+db.courses.updateOne({name: "Hari"}, {$push:{skills: "MongoDB"}})
+db.courses.updateOne({name: "Hari"}, {$pull:{skills: "MongoDB"}})
+db.courses.updateOne({name: "Hari"}, {$pop:{skills: 1 }})
+db.courses.updateOne({name: "Hari"}, {$pop:{skills: -1 }})
+```
+- **Note:** Instead of using true and false we can also use 0 and 1
+
+### Upsert Command
+- It will search for the document to update if the document is not available then it will insert a new document
+- Syntax:
+```
+db.courses.updateOne({name : "Hari"}, {$set:{age: 22}}, {upsert:true})
+```
+
+### Delete Command
+- Used to delete the document like other command delete also has two methods `deleteOne()` and `deleteMany()`
+```
+db.courses.deleteOne({name:"Hari"})
+```
+
+### Comparison and Logical Operators
+```
+db.courses.find({age:{$gte : 20}, {_id: false, name:true})
+```
+- `$gte` - Greater than or Equal to 
+- `$lte` - Lesser than or Equal to 
+- `$gt` - Greater than 
+- `$lt` - Lesser than 
+- `$eq` - Equal to
+
+```
+db.courses.find({$and:[{age: 22},{name: "Hari"}]}, {_id: false, name:true})
+```
+- like `$and` we have `$or` and `$nor`
+
+### Limit and Skip Functions
+- Limit used to limit number of document to query
+- Skip used to skip the number of document specified
+
+```
+db.courses.find().skip(2)
+db.courses.find().limit(1)
+```
+
+### Aggregate Functions
+- It is like a GROUP clause in SQL
+**Syntax:**
+```
+db.courses.aggregate([
+  { $match: { name: "Hari" } },
+  { $sort: { name: 1 } },   // ascending
+  { $skip: 2 },
+  { $limit: 1 }
+]);
+
+db.courses.aggregate([
+  {$group:{_id: "$name", avg:{$avg: "$age"}}}  // $group like GROUP CLAUSE
+  {$out: "AverageAge"}
+])
+```
+
+### Lookup Function
+- It is a part of aggregate Function
+- It performs like joins in SQL
+- If your application uses more lookups, Using SQL will be a better option
+```
+db.orders.aggregate([
+  {$lookup:{
+        from: "customers",
+      	localField: "customer_id",
+      	foreignField: "_id",
+      	as : "customer"
+  }}
+])
+```
+
+### Schema Validation
+- This how we have to specify the schema and its datatype to store data
+
+```
+db.createCollection(
+    "orders", {
+        validator:{
+          $jsonSchema:{
+            bsonType: "object",
+            required : ["item", "price", "customer_id"],
+            properties: {
+              item: {
+                bsonType: "string",
+                description: "Stores the Item Name - Required"
+              },
+    
+              price:{
+                bsonType: "number",
+                description: "Price of the Item - Required"
+              },
+    
+              customer_id:{
+                bsonType: "objectId",
+                description: "ID of Customer"
+              }
+            }
+          }
+        }
+      }
+)
+```
+
+
+---
 # Unit - 4
 
 # Selenium – Detailed Explanation
